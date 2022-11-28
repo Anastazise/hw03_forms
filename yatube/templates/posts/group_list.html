@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}
+Записи сообщества {{group.title}}
+{% endblock %}
+{% block content %}
+  <h2>{{group.title}}</h2>
+  <p>{{group.description|linebreaks }}</p>
+{% for post in posts %}
+  <ul>
+    <li>
+      Автор: {{ post.author.get_full_name }}
+    </li>
+    <li>
+      Дата публикации: {{ post.pub_date|date:'d E Y' }}
+    </li>
+  </ul>
+    <p>{{ post.text|linebreaks }}</p>    
+  {% if not forloop.last %}<hr>{% endif %}
+{% endfor %}
+{% endblock %}
+{% include 'includes/footer.html' %}
