@@ -1,11 +1,10 @@
 from django import forms
 from .models import Post
 
-MIN_POST_LEN = 30
+MIN_POST_LEN = 2
 
 
 class PostForm(forms.ModelForm):
-    """Форма добавления поста."""
 
     class Meta:
         model = Post
