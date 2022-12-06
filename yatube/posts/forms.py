@@ -10,8 +10,8 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ("text", "group")
         help_texts = {
-            'text':('Текст поста'),
-            'group':('К какой группе принадлежит'),
+            'text': ('Текст поста'),
+            'group': ('К какой группе принадлежит'),
         }
 
     def clean_text(self):
