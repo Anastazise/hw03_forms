@@ -8,11 +8,6 @@ class AboutAuthorView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Об авторе проекта'
         context['header'] = ('Привет, я юморит')
-        context['text'] = (
-            'Тут я размещу информацию о себе используя свои '
-            'умения верстать. Картинки, блоки, элементы бустрап.'
-            'А может быть, просто напишу несколько абзацев текста.'
-        )
         return context
 
 
