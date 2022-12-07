@@ -5,8 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from .models import Group, Post, User
 from .forms import PostForm
-
-POSTS_PER_PAGE = 10
+from yatube.settings import POSTS_PER_PAGE
 
 
 def index(request):
@@ -80,5 +79,3 @@ def post_edit(request, post_id):
             return redirect('posts:post_detail', post.pk)
         return render(request, "posts/create_post.html",
                       {'form': form, "is_edit": is_edit})
-    else:
-        return redirect('posts:post_detail', post.pk)

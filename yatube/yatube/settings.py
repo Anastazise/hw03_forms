@@ -84,6 +84,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+MIN_POST_LEN = 2
+
+POSTS_PER_PAGE = 10
+
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
