@@ -66,8 +66,7 @@ class PostURLTests(TestCase):
 
     def test_create_url_redirect_anonymous_on_admin_login(self):
         """Страница /create/ перенаправит анонимного пользователя
-        на страницу логина.
-        """
+        на страницу логина."""
         response = self.guest_client.get('/create/', follow=True)
         self.assertRedirects(
             response, '/auth/login/?next=/create/')
